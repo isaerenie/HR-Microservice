@@ -1,38 +1,12 @@
-
-Spring Boot Project Hr Uygulaması
-
-Bu projede şirket kayıtları ve şirketlere ait personel kayıtları tutuluyor
-
-
-## API Kullanımı
-
-#### Tüm öğeleri getir
-
-```http
-  GET /api/items
-```
-
-| Parametre | Tip     | Açıklama                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Gerekli**. API anahtarınız. |
-
-#### Öğeyi getir
-
-```http
-  GET /api/items/${id}
-```
-
-| Parametre | Tip     | Açıklama                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Gerekli**. Çağrılacak öğenin anahtar değeri |
-
-#### add(num1, num2)
-
-İki sayı alır ve toplamı döndürür.
-
-  
-## Ekler
-
-Herhangi bir ek bilgi buraya gelir
-
-  
+## Spring Boot Hr App
+I have developed this REST API for an Hr application. This API performs fundamental CRUD operations for Hr department.
+## Diagram for the application
+## Configuration table
+|  Components |  Technology |
+| ------------ | ------------ |
+| Backend |  Openapi |
+|  Database | JPA-Hibernate,MySQL |
+| API Documentation  |  Postman |
+|  Server Build | Gradle  |
+| API testing  |  POSTMAN  |
+|  Tool | Intellj Idea/VSC
