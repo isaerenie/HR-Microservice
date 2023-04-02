@@ -11,7 +11,7 @@ I have developed this REST API for an Hr application. This API performs fundamen
 | API testing  |  POSTMAN  |
 |  Tool | Intellj Idea/VSC
 
-##Installation & Run
+## Installation & Run
 
 Before running the API server, you should update the database config inside the application.properties file.
 Update the port number, username and password as per your local database config.
@@ -19,7 +19,7 @@ Update the port number, username and password as per your local database config.
 ```yaml
 server.port=8090
 
-#datasource configuration
+# datasource configuration
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost/enoca_db
 spring.datasource.username=root
@@ -34,12 +34,12 @@ spring.jpa.show-sql=true
 springdoc.api-docs.path=/api-docs
 
 ```
-##API Root Endpoint
+## API Root Endpoint
     http://localhost:8090/
-	http://localhost:8009/swagger-ui/index.html#/
-##API Module Endpoints
+    http://localhost:8009/swagger-ui/index.html#/
+## API Module Endpoints
 
-###Personel Module
+### Personel Module
 
 ```yaml
 GET /api/personel :Gets all personels
@@ -48,7 +48,7 @@ POST /api/personel:Save new personel
 GET /api/personel/{id}: Find personel
 DELETE /api/personel/{id}: Delete personel
 ```
-###Company Module
+### Company Module
 
 ```yaml
 GET /api/company :Gets all companies
