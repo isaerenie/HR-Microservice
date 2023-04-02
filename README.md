@@ -10,7 +10,9 @@ I have developed this REST API for an Hr application. This API performs fundamen
 |  Server Build | Gradle  |
 | API testing  |  POSTMAN  |
 |  Tool | Intellj Idea/VSC
+
 ##Installation & Run
+
 Before running the API server, you should update the database config inside the application.properties file.
 Update the port number, username and password as per your local database config.
 
