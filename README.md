@@ -10,3 +10,83 @@ I have developed this REST API for an Hr application. This API performs fundamen
 |  Server Build | Gradle  |
 | API testing  |  POSTMAN  |
 |  Tool | Intellj Idea/VSC
+##Installation & Run
+Before running the API server, you should update the database config inside the application.properties file.
+Update the port number, username and password as per your local database config.
+
+```yaml
+server.port=8090
+
+#datasource configuration
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost/enoca_db
+spring.datasource.username=root
+spring.datasource.password=
+
+# jpa configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+
+# /api-docs endpoint custom path
+springdoc.api-docs.path=/api-docs
+
+```
+##API Root Endpoint
+    http://localhost:8090/
+	http://localhost:8009/swagger-ui/index.html#/
+##API Module Endpoints
+###Personel Module
+```yaml
+GET /api/personel :Gets all personels
+PUT /api/personel :Update personel
+POST /api/personel:Save new personel
+GET /api/personel/{id}: Find personel
+DELETE /api/personel/{id}: Delete personel
+```
+###Company Module
+```yaml
+GET /api/company :Gets all companies
+PUT /api/company :Update company
+POST /api/company:Save new company
+GET /api/company/{id}: Find company
+DELETE /api/company/{companyId}: Delete company
+```
+##Sample API Response for Customer Login
+POST   http://localhost:8090/api/personel
+
+**- Request Body**
+```json
+{
+    "name": "John",
+    "surname": "Doe",
+    "email": "john.doe@example.com",
+    "company": {
+        "companyId": 2,
+        "name": "Eren A.Ş",
+        "address": "Atatürk Bulvarı"
+    }
+}
+```
+**- Response**
+
+```json
+{
+    "message": "Personel saved successfully",
+    "status": "SUCCESS",
+    "code": "200",
+    "details": {
+        "personel": {
+            "personelId": 2,
+            "name": "John",
+            "surname": "Doe",
+            "email": "john.doe@example.com",
+            "company": {
+                "companyId": 2,
+                "name": "Eren A.Ş",
+                "address": "Atatürk Bulvarı"
+            }
+        }
+    }
+}
+```
