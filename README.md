@@ -54,7 +54,7 @@ POST /api/company:Save new company
 GET /api/company/{id}: Find company
 DELETE /api/company/{companyId}: Delete company
 ```
-## Sample API Response for Customer Login
+## Sample API Response for Employee Login
 
 POST   http://localhost:8090/api/employee
 
