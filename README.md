@@ -10,16 +10,14 @@ I have developed this REST API for an Hr application. This API performs fundamen
 |  Server Build | Gradle  |
 | API testing  |  POSTMAN  |
 |  Tool | Intellj Idea/VSC
-
 ## Installation & Run
-
 Before running the API server, you should update the database config inside the application.properties file.
 Update the port number, username and password as per your local database config.
 
 ```yaml
 server.port=8090
 
-# datasource configuration
+#datasource configuration
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.url=jdbc:mysql://localhost/enoca_db
 spring.datasource.username=root
@@ -36,17 +34,16 @@ springdoc.api-docs.path=/api-docs
 ```
 ## API Root Endpoint
     http://localhost:8090/
-    http://localhost:8009/swagger-ui/index.html#/
+	http://localhost:8009/swagger-ui/index.html#/
 ## API Module Endpoints
-
 ### Personel Module
 
 ```yaml
-GET /api/personel :Gets all personels
-PUT /api/personel :Update personel
-POST /api/personel:Save new personel
-GET /api/personel/{id}: Find personel
-DELETE /api/personel/{id}: Delete personel
+GET /api/employee :Gets all employees
+PUT /api/employee :Update employee
+POST /api/employee:Save new employee
+GET /api/employee/{id}: Find employee
+DELETE /api/employee/{id}: Delete employee
 ```
 ### Company Module
 
@@ -59,7 +56,7 @@ DELETE /api/company/{companyId}: Delete company
 ```
 ## Sample API Response for Customer Login
 
-POST   http://localhost:8090/api/personel
+POST   http://localhost:8090/api/employee
 
 **- Request Body**
 ```json
@@ -78,12 +75,12 @@ POST   http://localhost:8090/api/personel
 
 ```json
 {
-    "message": "Personel saved successfully",
+    "message": "Employee saved successfully",
     "status": "SUCCESS",
     "code": "200",
     "details": {
-        "personel": {
-            "personelId": 2,
+        "employee": {
+            "id": 2,
             "name": "John",
             "surname": "Doe",
             "email": "john.doe@example.com",
