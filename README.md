@@ -36,7 +36,9 @@ springdoc.api-docs.path=/api-docs
     http://localhost:8090/
 	http://localhost:8009/swagger-ui/index.html#/
 ##API Module Endpoints
+
 ###Personel Module
+
 ```yaml
 GET /api/personel :Gets all personels
 PUT /api/personel :Update personel
@@ -45,6 +47,7 @@ GET /api/personel/{id}: Find personel
 DELETE /api/personel/{id}: Delete personel
 ```
 ###Company Module
+
 ```yaml
 GET /api/company :Gets all companies
 PUT /api/company :Update company
@@ -53,6 +56,7 @@ GET /api/company/{id}: Find company
 DELETE /api/company/{companyId}: Delete company
 ```
 ##Sample API Response for Customer Login
+
 POST   http://localhost:8090/api/personel
 
 **- Request Body**
